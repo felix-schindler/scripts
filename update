@@ -1,0 +1,8 @@
+#!/bin/zsh
+
+echo "--- BREW ---"
+brew upgrade
+rm -rf `brew --cache`
+
+echo "--- DENO ---"
+deno upgrade

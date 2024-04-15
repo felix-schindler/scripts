@@ -1,0 +1,5 @@
+#!/bin/zsh
+
+echo v4 $(dig -4 TXT +short o-o.myaddr.l.google.com @ns1.google.com)
+echo v6 $(dig -6 TXT +short o-o.myaddr.l.google.com @ns1.google.com)
+

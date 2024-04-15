@@ -1,0 +1,5 @@
+#!/bin/zsh
+
+sudo route -n delete $MINE
+sudo route -n delete $BLUE
+sudo route -n delete registry.npmjs.org

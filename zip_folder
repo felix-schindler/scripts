@@ -1,0 +1,8 @@
+#!/bin/zsh
+
+if [ -z "$1" ]; then
+	echo "Please provide the folder name to be compressed"
+	exit 1
+fi
+
+zip -r $1 $1

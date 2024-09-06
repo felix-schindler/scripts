@@ -1,5 +1,17 @@
 #!/bin/zsh
 
-echo v4 $(dig -4 TXT +short o-o.myaddr.l.google.com @ns1.google.com)
-echo v6 $(dig -6 TXT +short o-o.myaddr.l.google.com @ns1.google.com)
+# Get v4 and v6 addresses
+v4=$(dig -4 TXT +short o-o.myaddr.l.google.com @ns1.google.com)
+v6=$(dig -6 TXT +short o-o.myaddr.l.google.com @ns1.google.com)
 
+# Remove quotes
+v4=${v4//\"/}
+v6=${v6//\"/}
+
+# Check if they are the same
+if [ "$v4" = "$v6" ]; then
+  echo $v4
+else
+  echo $v4
+  echo $v6
+fi
